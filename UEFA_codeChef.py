@@ -1,4 +1,5 @@
 ##UEFA
+winners=[]
 for _ in range(int(input())):
     
     team_pts={}
@@ -31,9 +32,14 @@ for _ in range(int(input())):
     team_gd=sorted(team_gd.items(),key=lambda y: y[1],reverse=True)
 
     if team_pts[0][1]==team_pts[1][1]:
-        print(team_gd[0][0],team_gd[1][0])
+        winners.append(team_gd[0][0])
+        winners.append(team_gd[1][0])
     else:
-        print(team_pts[0][0],team_pts[1][0])
+        winners.append(team_pts[0][0])
+        winners.append(team_pts[1][0])
+
+print(' '.join(winners[:2]))
+print(' '.join(winners[2:]))
     
         
     
